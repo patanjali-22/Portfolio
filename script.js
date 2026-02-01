@@ -99,7 +99,199 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
 });
 
-// ... (other functions remain the same) 
+// ========================================
+// Navigation
+// ========================================
+function initNavigation() {
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        updateActiveNavLink();
+    });
+
+    // Mobile menu toggle
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
+
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPos = window.scrollY + 150;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+        if (navLink && scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            navLink.classList.add('active');
+        }
+    });
+}
+
+// ========================================
+// Typing Effect
+// ========================================
+function initTypingEffect() {
+    const titles = ['Software Engineer', 'Backend Developer', 'Cloud Enthusiast', 'Problem Solver'];
+    const typingElement = document.getElementById('typing-text');
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function type() {
+        const currentTitle = titles[titleIndex];
+
+        if (isDeleting) {
+            typingElement.textContent = currentTitle.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+        } else {
+            typingElement.textContent = currentTitle.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentTitle.length) {
+            typingSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            titleIndex = (titleIndex + 1) % titles.length;
+            typingSpeed = 500;
+        }
+
+        setTimeout(type, typingSpeed);
+    }
+
+    type();
+}
+
+// ========================================
+// Render Skills
+// ========================================
+function renderSkills() {
+    const skillsGrid = document.getElementById('skills-grid');
+    if (!skillsGrid) return;
+
+    skillsGrid.innerHTML = skillsData.map(category => `
+        <div class="skill-category">
+            <div class="category-header">
+                <i class="fas ${category.icon}"></i>
+                <h3>${category.title}</h3>
+            </div>
+            <div class="skill-tags">
+                ${category.skills.map(skill => `
+                    <span class="skill-tag${category.featured === skill ? ' featured' : ''}">${skill}</span>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+// ========================================
+// Render Experience
+// ========================================
+function renderExperience() {
+    const timeline = document.getElementById('timeline');
+    if (!timeline) return;
+
+    timeline.innerHTML = experienceData.map(exp => `
+        <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <div class="timeline-title-wrapper">
+                        <h3 class="timeline-title">${exp.title}</h3>
+                        <span class="timeline-company">@ ${exp.company}</span>
+                    </div>
+                    <span class="timeline-date">
+                        <i class="far fa-calendar-alt"></i>
+                        ${exp.date}
+                    </span>
+                </div>
+                <ul class="timeline-list">
+                    ${exp.points.map(point => `
+                        <li><i class="fas fa-chevron-right"></i>${point}</li>
+                    `).join('')}
+                </ul>
+                <div class="timeline-tags">
+                    ${exp.tags.map(tag => `<span>${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ========================================
+// Render Projects
+// ========================================
+function renderProjects() {
+    const projectsGrid = document.getElementById('projects-grid');
+    if (!projectsGrid) return;
+
+    projectsGrid.innerHTML = projectsData.map(project => `
+        <article class="project-card${project.featured ? ' featured' : ''}">
+            <div class="project-image">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        ${project.github ? `
+                        <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Code">
+                            <i class="fab fa-github"></i>
+                        </a>` : ''}
+                        ${project.website ? `
+                        <a href="${project.website}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Website">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>` : ''}
+                    </div>
+                </div>
+                <div class="project-icon"><i class="fas ${project.icon}"></i></div>
+            </div>
+            <div class="project-content">
+                ${project.featured ? '<span class="project-label">Featured Project</span>' : ''}
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="project-tech">
+                    ${project.tech.map(t => `<span>${t}</span>`).join('')}
+                </div>
+                <div class="project-buttons">
+                    ${project.github ? `
+                    <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-btn">
+                        <i class="fab fa-github"></i>
+                        <span>View Code</span>
+                    </a>` : ''}
+                    ${project.website ? `
+                    <a href="${project.website}" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                        <i class="fas fa-external-link-alt"></i>
+                        <span>Live Demo</span>
+                    </a>` : ''}
+                </div>
+            </div>
+        </article>
+    `).join('');
+}
 
 // ========================================
 // Scroll Animations
