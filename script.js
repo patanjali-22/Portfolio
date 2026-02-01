@@ -5,7 +5,7 @@ const skillsData = [
     { icon: 'fa-code', title: 'Programming', skills: ['Java', 'Python', 'JavaScript', 'C++', 'C', 'SQL', 'Rust', 'R'] },
     { icon: 'fa-globe', title: 'Web Development', skills: ['React.js', 'Node.js', 'Spring Boot', 'TypeScript', 'Django', 'Flask', 'REST APIs', 'gRPC', 'GraphQL', 'Redux'] },
     { icon: 'fa-database', title: 'Databases & Big Data', skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Oracle', 'Redis', 'Apache Kafka', 'Hadoop', 'Spark'] },
-    { icon: 'fa-cloud', title: 'Cloud & DevOps', skills: ['AWS', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'CI/CD', 'Ansible', 'Git'], featured: 'AWS' },
+    { icon: 'fa-cloud', title: 'Cloud & DevOps', skills: ['AWS', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'CI/CD', 'Ansible', 'Git'] },
     { icon: 'fa-brain', title: 'Machine Learning & AI', skills: ['PyTorch', 'TensorFlow', 'LangChain', 'RAG', 'Ollama', 'MCP'] },
     { icon: 'fa-tools', title: 'Tools & Architecture', skills: ['Microservices', 'System Design', 'RabbitMQ', 'JUnit', 'Mockito', 'Postman', 'Linux', 'JIRA'] }
 ];
