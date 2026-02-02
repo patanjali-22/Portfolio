@@ -2,39 +2,45 @@
 // Data Configuration
 // ========================================
 const skillsData = [
-    { icon: 'fa-code', title: 'Programming', skills: ['Java', 'Python', 'JavaScript', 'C++', 'C', 'SQL', 'Rust', 'R'] },
-    { icon: 'fa-globe', title: 'Web Development', skills: ['React.js', 'Node.js', 'Spring Boot', 'TypeScript', 'Django', 'Flask', 'REST APIs', 'gRPC', 'GraphQL', 'Redux'] },
-    { icon: 'fa-database', title: 'Databases & Big Data', skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Oracle', 'Redis', 'Apache Kafka', 'Hadoop', 'Spark'] },
-    { icon: 'fa-cloud', title: 'Cloud & DevOps', skills: ['AWS', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'CI/CD', 'Ansible', 'Git'] },
-    { icon: 'fa-brain', title: 'Machine Learning & AI', skills: ['PyTorch', 'TensorFlow', 'LangChain', 'RAG', 'Ollama', 'MCP'] },
-    { icon: 'fa-tools', title: 'Tools & Architecture', skills: ['Microservices', 'System Design', 'RabbitMQ', 'JUnit', 'Mockito', 'Postman', 'Linux', 'JIRA'] }
+    { icon: 'fa-code', title: 'Programming', skills: ['Java', 'C', 'C++', 'Python', 'JavaScript', 'SQL', 'R', 'Rust'] },
+    { icon: 'fa-globe', title: 'Web Development', skills: ['HTML', 'CSS', 'TypeScript', 'Bootstrap', 'React.js', 'Node.js', 'Django', 'Flask', 'Spring Boot', 'Hibernate ORM', 'Redux', 'REST APIs', 'gRPC', 'GraphQL', 'RBAC'] },
+    { icon: 'fa-database', title: 'Databases & Big Data', skills: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Redis', 'Hadoop', 'Spark', 'Apache Kafka'] },
+    { icon: 'fa-cloud', title: 'Cloud, DevOps & Version Control', skills: ['AWS (S3, EC2, Lambda, SQS, SNS)', 'Azure', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'Ansible', 'Git', 'Shell Scripting', 'AWS CLI'] },
+    { icon: 'fa-brain', title: 'Machine Learning & AI', skills: ['PyTorch', 'TensorFlow', 'MCP', 'LangChain', 'RAG', 'Ollama'] },
+    { icon: 'fa-tools', title: 'Tools & Testing', skills: ['JUnit', 'Mockito', 'MockMvc', 'Testcontainers', 'Postman', 'Swagger', 'RabbitMQ', 'Grafana', 'Splunk', 'Linux', 'JIRA'] },
+    { icon: 'fa-layer-group', title: 'Other Skills', skills: ['System Design', 'Microservices', 'Distributed Systems', 'Event-Driven Architecture', 'Caching', 'Cloud Storage', 'Unit Testing', 'Debugging'] }
 ];
 
 const experienceData = [
     {
-        title: 'Associate Software Engineer',
+        title: 'Software Engineer',
         company: 'Light & Wonder',
-        date: 'Jan 2023 — Jul 2024',
+        date: 'Sep 2023 — Jul 2024',
         points: [
-            'Designed and optimized backend microservices using <strong>Java</strong> and <strong>Spring Boot</strong>, increasing request throughput by <strong>70%</strong>.',
-            'Built event-driven analytics pipelines using <strong>Apache Kafka</strong> processing millions of player events daily.',
-            'Optimized multi-database performance across <strong>PostgreSQL</strong>, Oracle, MongoDB, MySQL, and Redis, reducing query times by <strong>30%</strong>.',
-            'Automated CI/CD pipelines using <strong>GitHub Actions</strong>, Jenkins, Docker, and Kubernetes, reducing deployment time by <strong>40%</strong>.',
-            'Led migration to <strong>Java 17</strong> and strengthened testing with JUnit/Mockito, achieving <strong>85% coverage</strong>.',
-            'Implemented <strong>Role-Based Access Control (RBAC)</strong> for secure, role-scoped access across backend resources.'
+            'Designed and optimized backend microservices using <strong>Java</strong> and <strong>Spring Boot</strong>, delivering scalable <strong>REST/gRPC APIs</strong> for player, promotion, and transaction workflows, increasing request throughput by <strong>70%</strong>.',
+            'Built and operated <strong>event-driven, distributed analytics pipelines</strong> using <strong>Apache Kafka</strong> and <strong>Kafka Streams</strong> to process millions of player events daily, enabling real-time behavior tracking.',
+            'Improved multi-database performance across <strong>PostgreSQL</strong>, <strong>Oracle</strong>, <strong>MySQL</strong>, and <strong>Redis</strong> through schema optimization, query tuning, and materialized views, reducing query execution times by <strong>30%</strong>.',
+            'Refactored and consolidated multiple microservice API calls into <strong>unified backend workflows</strong>, improving inter-service communication efficiency and reducing end-to-end response latency by <strong>25%</strong>.',
+            'Automated and standardized <strong>CI/CD pipelines</strong> using <strong>GitHub Actions</strong>, Jenkins, Docker, and Kubernetes, reducing deployment time by <strong>40%</strong>.',
+            'Led the migration to <strong>Java 17</strong> and strengthened automated <strong>unit/API/integration testing</strong> using JUnit/Mockito, MockMvc, and Testcontainers, achieving <strong>85% critical-path coverage</strong>.',
+            'Improved production stability by identifying and resolving <strong>critical production issues</strong>, leveraging logging, metrics, and performance profiling to reduce system downtime.'
         ],
-        tags: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Kubernetes']
+        tags: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Kubernetes', 'REST', 'gRPC']
     },
     {
-        title: 'Software Engineer Intern',
-        company: 'Light & Wonder',
-        date: 'Aug 2022 — Dec 2022',
+        title: 'Associate Software Engineer',
+        company: 'HCLTech',
+        date: 'Jul 2021 — Aug 2023',
         points: [
-            'Built user-facing features using <strong>Angular</strong> and TypeScript with component-based UI and error handling.',
-            'Developed backend services using <strong>C#</strong> and .NET with REST APIs, reducing data-related errors by <strong>60%</strong>.',
-            'Contributed to DevOps workflows using CI/CD pipelines, Docker, and logging/monitoring tools.'
+            'Built user-facing features with <strong>React</strong> and <strong>TypeScript</strong> using component-based UI, validation, error handling, and loading states, backed by services built with <strong>Java Spring Boot</strong> and <strong>Node.js</strong>, reducing user-reported issues by <strong>25%</strong>.',
+            'Designed an API-driven architecture enabling seamless integration across a digital banking ecosystem. Integrated <strong>MySQL</strong> and <strong>MongoDB</strong> with backend services using <strong>JDBC</strong> and <strong>Hibernate ORM</strong>, reducing transaction processing latency by <strong>30%</strong>.',
+            'Enhanced system security by integrating <strong>Single Sign-On (SSO)</strong> with <strong>RBAC</strong>, strengthening authentication and authorization workflows across enterprise platforms.',
+            'Implemented distributed locking using <strong>Redis</strong> for fault-tolerant request handling, cutting downtime in critical production services from <strong>20 minutes to 5 minutes</strong>.',
+            'Integrated <strong>Firebase Cloud Messaging (FCM)</strong> into the notification system, improving push delivery reliability by <strong>28%</strong> and increasing user reach for high-volume campaign notifications.',
+            'Improved production reliability of microservices using <strong>Resilience4j</strong> with end-to-end observability via <strong>Splunk</strong> and <strong>Grafana</strong>, reducing incident resolution time by <strong>30%</strong>.',
+            'Authored comprehensive technical documentation—API specs via <strong>Swagger</strong>, project artifacts in <strong>JIRA</strong>, and system architecture overviews—supporting cross-team collaboration and faster onboarding.'
         ],
-        tags: ['Angular', 'TypeScript', 'C#', '.NET', 'Redis', 'Docker']
+        tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'MySQL', 'Redis', 'FCM', 'Resilience4j', 'Grafana']
     }
 ];
 
@@ -154,7 +160,7 @@ function updateActiveNavLink() {
 // Typing Effect
 // ========================================
 function initTypingEffect() {
-    const titles = ['Software Engineer', 'Backend Developer', 'Cloud Enthusiast', 'Problem Solver'];
+    const titles = ['Software Engineer', 'Full Stack Developer', 'Cloud Enthusiast', 'Problem Solver'];
     const typingElement = document.getElementById('typing-text');
     let titleIndex = 0;
     let charIndex = 0;

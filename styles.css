@@ -770,37 +770,45 @@ strong {
 .certification-badge {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, rgba(255, 153, 0, 0.1), rgba(255, 153, 0, 0.05));
-    border: 1px solid rgba(255, 153, 0, 0.3);
-    border-radius: 12px;
+    gap: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    background: linear-gradient(135deg, rgba(255, 153, 0, 0.15), rgba(255, 153, 0, 0.05));
+    border: 1px solid rgba(255, 153, 0, 0.4);
+    border-radius: 16px;
     transition: all var(--transition-normal);
+    box-shadow: 0 4px 20px rgba(255, 153, 0, 0.1);
+    text-decoration: none;
 }
 
 .certification-badge:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
     border-color: #ff9900;
+    box-shadow: 0 10px 30px rgba(255, 153, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255, 153, 0, 0.2), rgba(255, 153, 0, 0.1));
 }
 
 .certification-badge i.fa-aws {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ff9900;
 }
 
 .cert-info {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
 }
 
 .cert-title {
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
     color: var(--text-primary);
+    letter-spacing: 0.02em;
 }
 
 .cert-subtitle {
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .certification-badge .fa-external-link-alt {
@@ -851,7 +859,7 @@ strong {
     background: var(--glass-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     margin-left: 1rem;
     transition: all var(--transition-normal);
 }
@@ -867,7 +875,9 @@ strong {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .timeline-title-wrapper {
@@ -895,21 +905,36 @@ strong {
 }
 
 .timeline-list {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    list-style: none;
 }
 
 .timeline-list li {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.875rem;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.timeline-list li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-list li strong {
+    display: inline;
+    color: var(--accent-primary);
+    font-weight: 600;
 }
 
 .timeline-list i {
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
     color: var(--accent-primary);
-    margin-top: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .timeline-tags {
