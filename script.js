@@ -7,7 +7,7 @@ const skillsData = [
     { icon: 'fa-database', title: 'Databases & Big Data', skills: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Redis', 'Hadoop', 'Spark', 'Apache Kafka'] },
     { icon: 'fa-cloud', title: 'Cloud, DevOps & Version Control', skills: ['AWS (S3, EC2, Lambda, SQS, SNS)', 'Azure', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'Ansible', 'Git', 'Shell Scripting', 'AWS CLI'] },
     { icon: 'fa-brain', title: 'Machine Learning & AI', skills: ['PyTorch', 'TensorFlow', 'MCP', 'LangChain', 'RAG', 'Ollama'] },
-    { icon: 'fa-tools', title: 'Tools & Testing', skills: ['JUnit', 'Mockito', 'MockMvc', 'Testcontainers', 'Postman', 'Swagger', 'RabbitMQ', 'Grafana', 'Splunk', 'Linux', 'JIRA'] },
+    { icon: 'fa-tools', title: 'Tools & Testing', skills: ['JUnit', 'Mockito', 'MockMvc', 'Testcontainers', 'Postman', 'Swagger', 'RabbitMQ', 'Prometheus', 'Grafana', 'Splunk', 'Linux', 'JIRA'] },
     { icon: 'fa-layer-group', title: 'Other Skills', skills: ['System Design', 'Microservices', 'Distributed Systems', 'Event-Driven Architecture', 'Caching', 'Cloud Storage', 'Unit Testing', 'Debugging'] }
 ];
 
