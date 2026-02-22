@@ -2,13 +2,70 @@
 // Data Configuration
 // ========================================
 const skillsData = [
-    { icon: 'fa-code', title: 'Programming', skills: ['Java', 'C', 'C++', 'Python', 'JavaScript', 'SQL', 'R', 'Rust'] },
-    { icon: 'fa-globe', title: 'Web Development', skills: ['HTML', 'CSS', 'TypeScript', 'Bootstrap', 'React.js', 'Node.js', 'Django', 'Flask', 'Spring Boot', 'Hibernate ORM', 'Redux', 'REST APIs', 'gRPC', 'GraphQL', 'RBAC'] },
-    { icon: 'fa-database', title: 'Databases & Big Data', skills: ['PostgreSQL', 'MySQL', 'Oracle', 'MongoDB', 'Redis', 'Hadoop', 'Spark', 'Apache Kafka'] },
-    { icon: 'fa-cloud', title: 'Cloud, DevOps & Version Control', skills: ['AWS (S3, EC2, Lambda, SQS, SNS)', 'Azure', 'Docker', 'Kubernetes', 'GCP', 'Jenkins', 'Ansible', 'Git', 'Shell Scripting', 'AWS CLI'] },
-    { icon: 'fa-brain', title: 'Machine Learning & AI', skills: ['PyTorch', 'TensorFlow', 'MCP', 'LangChain', 'RAG', 'Ollama'] },
-    { icon: 'fa-tools', title: 'Tools & Testing', skills: ['JUnit', 'Mockito', 'MockMvc', 'Testcontainers', 'Postman', 'Swagger', 'RabbitMQ', 'Prometheus', 'Grafana', 'Splunk', 'Linux', 'JIRA'] },
-    { icon: 'fa-layer-group', title: 'Other Skills', skills: ['System Design', 'Microservices', 'Distributed Systems', 'Event-Driven Architecture', 'Caching', 'Cloud Storage', 'Unit Testing', 'Debugging'] }
+    {
+        icon: 'fa-code',
+        title: 'Programming',
+        skills: ['Java', 'C', 'C++', 'Python', 'C#', 'JavaScript', 'SQL', 'R', 'Rust']
+    },
+    {
+        icon: 'fa-globe',
+        title: 'Web Development',
+        skills: [
+            'HTML', 'CSS', 'TypeScript', 'Bootstrap',
+            'React.js', 'Next.js', 'Redux', 'Angular',
+            'Node.js', 'Django', 'Flask', 'FastAPI',
+            'Spring Boot', 'Hibernate ORM', 'ASP.NET',
+            'REST APIs', 'gRPC', 'GraphQL', 'RBAC'
+        ]
+    },
+    {
+        icon: 'fa-database',
+        title: 'Databases & Big Data',
+        skills: [
+            'PostgreSQL', 'MySQL', 'Oracle', 'MongoDB',
+            'Redis', 'Hadoop', 'Spark',
+            'Apache Kafka', 'ChromaDB'
+        ]
+    },
+    {
+        icon: 'fa-cloud',
+        title: 'Cloud, DevOps & Version Control',
+        skills: [
+            'AWS (S3, EC2, Lambda, EKS, ECR, SQS, API Gateway, CloudWatch)',
+            'Azure', 'GCP',
+            'Docker', 'Kubernetes', 'Helm',
+            'Terraform (IaC)', 'Jenkins', 'Ansible',
+            'Git', 'Shell Scripting'
+        ]
+    },
+    {
+        icon: 'fa-brain',
+        title: 'Machine Learning & AI',
+        skills: [
+            'PyTorch', 'TensorFlow', 'Hugging Face',
+            'LangChain', 'LangGraph', 'RAG',
+            'Pinecone', 'GenAI', 'Ollama'
+        ]
+    },
+    {
+        icon: 'fa-tools',
+        title: 'Tools & Testing',
+        skills: [
+            'JUnit', 'Mockito', 'MockMvc', 'Testcontainers',
+            'Postman', 'Swagger',
+            'RabbitMQ', 'Splunk', 'Prometheus',
+            'Linux', 'JIRA'
+        ]
+    },
+    {
+        icon: 'fa-layer-group',
+        title: 'Other Skills',
+        skills: [
+            'System Design', 'Microservices',
+            'Distributed Systems', 'Event-Driven Architecture',
+            'Caching', 'Unit Testing', 'Debugging'
+        ]
+    }
 ];
 
 const experienceData = [
@@ -25,10 +82,10 @@ const experienceData = [
             'Led the migration to <strong>Java 17</strong> and strengthened automated <strong>unit/API/integration testing</strong> using JUnit/Mockito, MockMvc, and Testcontainers, achieving <strong>85% critical-path coverage</strong>.',
             'Improved production stability by identifying and resolving <strong>critical production issues</strong>, leveraging logging, metrics, and performance profiling to reduce system downtime.'
         ],
-        tags: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Kubernetes', 'REST', 'gRPC']
+        tags: ['Java', 'Spring Boot', 'Kafka', 'PostgreSQL', 'Docker', 'Kubernetes', 'REST', 'gRPC', 'Prometheus', 'OpenTelemetry']
     },
     {
-        title: 'Associate Software Engineer',
+        title: 'Software Engineer',
         company: 'HCLTech',
         date: 'Jul 2021 — Aug 2023',
         points: [
@@ -40,7 +97,7 @@ const experienceData = [
             'Improved production reliability of microservices using <strong>Resilience4j</strong> with end-to-end observability via <strong>Splunk</strong> and <strong>Grafana</strong>, reducing incident resolution time by <strong>30%</strong>.',
             'Authored comprehensive technical documentation—API specs via <strong>Swagger</strong>, project artifacts in <strong>JIRA</strong>, and system architecture overviews—supporting cross-team collaboration and faster onboarding.'
         ],
-        tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'MySQL', 'Redis', 'FCM', 'Resilience4j', 'Grafana']
+        tags: ['React', 'TypeScript', 'C#', '.NET', 'Node.js', 'Spring Boot', 'MongoDB', 'MySQL', 'Redis', 'AWS', 'Splunk', 'Grafana']
     }
 ];
 
@@ -69,19 +126,20 @@ const projectsData = [
         github: 'https://github.com/patanjali-22/Video-audio-converter'
     },
     {
-        title: 'RAG App with MCP',
-        description: 'Agentic RAG application using Model Context Protocol (MCP) with Qdrant vector database for semantic search. Features F1 FAQ retrieval, Bright Data web search integration, and seamless Cursor IDE integration.',
-        tech: ['Python', 'MCP', 'RAG', 'Qdrant', 'Docker', 'LangChain', 'Vector DB'],
-        icon: 'fa-brain',
-        github: 'https://github.com/patanjali-22/RAG-App-MCP'
-    },
-    {
         title: 'Code Review Assistant',
         description: 'AI-powered code review assistant using RAG pipelines with embedding-based retrieval. Reduced manual review time by 30% with prompt engineering and model fine-tuning on Vertex AI.',
         tech: ['Python', 'LangChain', 'RAG', 'ChromaDB', 'Vertex AI', 'Streamlit'],
         icon: 'fa-robot',
         github: 'https://github.com/patanjali-22/Code_Reviewer'
     },
+    {
+        title: 'Smart AI Agent',
+        description: 'Agentic AI system built using LLMs and RAG architecture with tool-calling capabilities. Supports autonomous reasoning, web search integration, vector database retrieval, and multi-step task execution using LangChain and LangGraph.',
+        tech: ['Python', 'LangChain', 'LangGraph', 'RAG', 'Pinecone', 'GenAI', 'Docker'],
+        icon: 'fa-brain',
+        github: 'https://github.com/patanjali-22/Smart-AI-Agent'
+    },
+
     {
         title: 'Pintos Operating System Kernel',
         description: 'Developed core kernel modules for a Unix-like OS including priority donation, MLFQ scheduling, and secured system calls. Achieved 95% success rate on 200+ test scenarios.',
